@@ -1,0 +1,32 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Welcome to your p5.js Notebook"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n  window.createCanvas(600, 300);\r\n  background(255);\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Goal\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Planning"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Draw the windmill\r\n\r\ndraw the windmill and it should be animated forward"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function windmill(x, h) {\r\n    rect()\r\n}"
+  }
+]
