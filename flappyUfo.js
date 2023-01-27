@@ -32,20 +32,57 @@ function ufo(x, y) {
     //found the opacity on the website "https://p5js.org/reference/#/p5/fill"
 }
  
+function barn(x ,y) {
+    fill(255, 0, 0);
+    rect(x, y, 200, 100);
+    fill(0);
+    triangle(x, y, x + 100, y - 40, x + 200, y);
+    rect(x + 60, y + 40, 40, 60);
+    rect(x + 103, y + 40, 40, 60);
+}
+
+function windmill(x, y) {
+    fill(0);
+    rect (x, y, 10, 60);
+}
+
+
+
 
 let y = 200;
 let x = 200;
 let ufoRotation = 0;
 
+let ufoY = 100;
+let ufoX = 100;
+
+let velocity = 1;
+let acceleration = 0.2;
+
 function draw() {
     console.log(x + "," +  y);
-    background(100, 200, 255);
+    background(100, 200, 255, 170);
     noStroke();
     fill(50, 195, 50);
     rect(0, 450, width, 800);
+    
 
-    stroke(0);
-    ufo(x, y);
+    //  ufo(mouseX, mouseY);
+    //  // stroke(0);
+   if (mouseIsPressed) {
+    velocity = velocity - 1.5;
+
+    //difficulty, change the acce and vel after a certain amout of time
+
+    
+
+
+
+
+   }
+
+    barn(x + 200, y + 150);
+
 
     // stroke(0);
     // push();
@@ -56,7 +93,40 @@ function draw() {
     // pop();
     
     // emojiRotation = emojiRotation + 0.01;
-    // x = x + 4;
-    // y = y - 1;
+    
+    // x = x - 2;
+
+    ufo(x, ufoY);
+
+    ufoY = ufoY + velocity;
+    velocity = velocity + acceleration;
+
+
+    if (ufoY > y + 250) {
+        console.log("game over");
+        isGameActive = false;
+        velocity = 0;
+        acceleration = 0;
+    }
+
+
 }
 
+
+
+
+
+
+
+
+
+
+
+/* a loop
+
+    if (barn < x - 200) {
+        barn = width + 100;
+    }
+
+    ??
+*/
